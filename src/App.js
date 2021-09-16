@@ -1,7 +1,6 @@
-/* eslint-disable */
 import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Switch, Route } from 'react-router';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import HomePage from './components/Homepage';
 import FilteredPage from './components/filteredPage';
@@ -13,16 +12,16 @@ const  App = () => {
     dispatch(getData());
   }, []);
   return (
-    <div className="App">
-    <Switch>
-      <Route exact path="/">
-        <HomePage />
-      </Route>
-      <Route path={`/${state.country}`}>
-        <FilteredPage />
-      </Route>
-    </Switch>
-  </div>
+    <Router>
+      <Switch>
+        <Route path={`/${state.country}`}>
+          <FilteredPage />
+        </Route>
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 export default App;

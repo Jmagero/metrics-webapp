@@ -1,4 +1,3 @@
-/* eslint-disable */
 import axios from 'axios';
 const GET_DATA_SUCCESS = 'covid/covidReducer/GET_DATA_SUCCESS';
 const GET_DATA = 'covid/covidReducer/GET_DATA';
