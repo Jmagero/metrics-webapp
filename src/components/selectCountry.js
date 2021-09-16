@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from "react"
 import { useSelector } from 'react-redux';
 import { today } from '../redux/covid/covid';
@@ -17,8 +16,6 @@ const SelectCountry = () => {
     const handleCategory = (event) => {
         setSelect(event.target.value);
     };
-    console.log(state.data.dates[today]);
-
     return(
         <form className={style.form}>
         <h2 className={`titleFont ${style.worldTitle}`}><span className={style.paddingLeft}>Filter By Country:</span></h2>
