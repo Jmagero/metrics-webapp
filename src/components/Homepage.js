@@ -1,7 +1,6 @@
-/* eslint-disable */
 import React from "react"
-import { useSelector, useDispatch } from 'react-redux';
-import style from './filteredPage.module.css';
+import { useSelector } from 'react-redux';
+import style from './HomePage.module.css';
 import SelectCountry from './selectCountry';
 const HomePage = () => {
     const state = useSelector((state) => state.covidReducer);
@@ -9,7 +8,7 @@ const HomePage = () => {
     return (
       <div className={style.div}>
         { state.loading
-        && <p>Loading Please wait</p>}
+        && <p className={style.loading}>Loading Please wait</p>}
         { covidTotal
         && (
         <>
