@@ -1,10 +1,7 @@
 import TestRenderer from 'react-test-renderer';
-import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { render, screen, fireEvent } from '@testing-library/react';
 import store from '../redux/configureStore';
-import App from '../App';
 import HomePage from '../components/Homepage';
 import Button from '../components/submitBtn';
 
@@ -46,13 +43,6 @@ afterAll(() => {
   global.fetch = unmockedFetch;
 });
 
-const MockApp = () => (
-  <Provider store={store}>
-    <App />
-  </Provider>
-);
-
-
 describe('Home Page', () => {
   it('Renders correctly', async () => {
     const home = TestRenderer.create(
@@ -78,4 +68,3 @@ describe('Submit Button', () => {
     expect(button).toMatchSnapshot();
   });
 });
-

@@ -1,15 +1,16 @@
-import React from "react"
+import React from 'react';
 import { useSelector } from 'react-redux';
 import style from './HomePage.module.css';
 import SelectCountry from './selectCountry';
+
 const HomePage = () => {
-    const state = useSelector((state) => state.covidReducer);
-    const covidTotal = state.data.total; 
-    return (
-      <div className={style.div}>
-        { state.loading
+  const state = useSelector((state) => state.covidReducer);
+  const covidTotal = state.data.total;
+  return (
+    <div className={style.div}>
+      { state.loading
         && <p className={style.loading}>Loading Please wait</p>}
-        { covidTotal
+      { covidTotal
         && (
         <>
           <h1 data-testid="title" className={`titleFont ${style.homeTitle}`}>Covid-19 OutBreak latest Report</h1>
@@ -37,8 +38,8 @@ const HomePage = () => {
           <SelectCountry />
         </>
         )}
-      </div>
-    );
+    </div>
+  );
 };
 
 export default HomePage;

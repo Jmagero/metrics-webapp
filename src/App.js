@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import HomePage from './components/Homepage';
 import FilteredPage from './components/filteredPage';
 import { getData } from './redux/covid/covid';
-const  App = () => {
+
+const App = () => {
   const state = useSelector((state) => state.covidReducer);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -23,5 +24,5 @@ const  App = () => {
       </Switch>
     </Router>
   );
-}
+};
 export default App;
