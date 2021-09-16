@@ -6,8 +6,8 @@
   font-size: 2.5rem;
   text-align: left;
   margin: 0;
-  background-color: #EC4C8A;
-  color: #F8CDDC;
+  background-color: #ec4c8a;
+  color: #f8cddc;
   width: 100%;
   padding: 0.6rem 0 0.6rem;
 }
@@ -17,8 +17,8 @@
 }
 
 .titleInfo {
-  background-color: #FD5394;
-  color: #FEF4F7;
+  background-color: #fd5394;
+  color: #fef4f7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@
   border-radius: 5px;
   border: none;
   font-size: 1rem;
-  background-color: #F198B9;
+  background-color: #f198b9;
   margin-top: 0.5rem;
   width: 100%;
 }
@@ -55,7 +55,7 @@
 }
 
 .link:hover {
-  color: #F44F8F;
+  color: #f44f8f;
 }
 
 .icon {
@@ -66,8 +66,8 @@
   font-size: 1.2rem;
   text-align: left;
   margin: 0;
-  background-color: #EA4988;
-  color: #F8B7D0;
+  background-color: #ea4988;
+  color: #f8b7d0;
   width: 100%;
   padding: 0.6rem 0 0.6rem;
 }
@@ -81,18 +81,18 @@
 }
 
 .li {
-  color: #FAEBF1;
+  color: #faebf1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .li1 {
-  background-color: #D24379;
+  background-color: #d24379;
 }
 
 .li2 {
-  background-color: #E94A87
+  background-color: #e94a87;
 }
 
 .liTitle {
