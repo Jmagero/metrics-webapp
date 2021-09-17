@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 150px;
+  color: white;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 18px;
+  background-color: #fc5092;
+  background-image: url("./map.jpg");
+  background-position: center;
+  background-position-x: 30px;
+  background-repeat: no-repeat;
+  background-size: 10em;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.header span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.container {
+  padding: 0;
+}
+
+.infoContainer {
+  width: 40%;
+}
+
+.byRegion {
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  background-color: #ee4c8b;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.row {
+  text-decoration: none;
+}
+
+.row:nth-child(1) {
+  background-color: #da467e !important;
+}
+
+.row:nth-child(2) {
+  background-color: #ee4c8b !important;
+}
+
+.row:nth-child(3) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(4) {
+  background-color: #da467e;
+}
+
+.row:nth-child(5) {
+  background-color: #da467e;
+}
+
+.row:nth-child(6) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(7) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(8) {
+  background-color: #da467e;
+}
+
+.row:nth-child(9) {
+  background-color: #da467e;
+}
+
+.row:nth-child(10) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(11) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(12) {
+  background-color: #da467e;
+}
+
+.row:nth-child(13) {
+  background-color: #da467e;
+}
+
+.row:nth-child(14) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(15) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(16) {
+  background-color: #da467e;
+}
+
+.row:nth-child(17) {
+  background-color: #da467e;
+}
+
+.row:nth-child(18) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(19) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(20) {
+  background-color: #da467e;
+}
+
+.row:nth-child(21) {
+  background-color: #da467e;
+}
+
+.row:nth-child(22) {
+  background-color: #ee4c8b;
+}
+
+.row:nth-child(23) {
+  background-color: #ee4c8b;
+}
+
+.empty {
+  background-color: #da467e;
+}

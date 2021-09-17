@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.cardFlex {
+  display: flex;
+}
+
+.cardo {
+  height: 180px;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 200px;
+}
+
+.arrowContainer {
+  width: 90%;
+  justify-content: flex-end;
+}
+
+.cardArrow {
+  color: white;
+  margin-top: 12px;
+}
+
+.info {
+  height: 80%;
+  color: white;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.virusImg {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 12px;
+}
+
+.name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.number {
+  font-size: 12px;
+  font-weight: 400;
+}

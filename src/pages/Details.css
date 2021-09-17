@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+.latoRegular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.latoBold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+.detailFlex {
+  display: flex;
+}
+
+.itemHeader {
+  height: 120px;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee4c8b;
+}
+
+.itemHeader h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.itemHeader span {
+  font-size: 14px;
+}
+
+.regionInfo {
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  background-color: #ce4176;
+}
+
+.regionsContainer {
+  height: 75vh;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.regionRow {
+  padding: 0 12px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.regionRow:nth-child(odd) {
+  background-color: #fb5092;
+}
+
+.regionRow:nth-child(even) {
+  background-color: #ce4276;
+}
+
+.numbersInfo {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.numbersInfo span {
+  margin-right: 15px;
+}
