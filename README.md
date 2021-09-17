@@ -1,14 +1,26 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Metrics-webapp
-This is React project that is about building a mobile web application to check a list of metrics (numeric values) that will  be created making use of React and Redux
+This is React project that is about building a mobile web application to check a list of metrics (numeric values).
 
-![image](https://user-images.githubusercontent.com/52098394/133691874-b8a4d158-2c3e-4786-8f69-a15321ab8946.png)
+![image](https://user-images.githubusercontent.com/52098394/133852663-6316d40f-1d1a-434c-a44c-14522da66b90.png)
+
 
 ## Built With
 
 - React
 - Redux
+- Git
+- GitHub
+- VScode
+
+## Live Demo
+
+[Netlify deploy](https://confident-aryabhata-71d87b.netlify.app/)
+
+## Video
+
+[Video](https://www.loom.com/share/282482322f9d4048915608f01690481a)
 
 ## Getting Started
 
@@ -55,14 +67,14 @@ You can either build a local production version of the project or open it direct
 👨‍💻 **Jocyline Magero**
 
 - Github: [@jmagero](https://github.com/Jmagero)
-- Twitter: [@MagzCelyn](https://twitter.com/MagzCelyn)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Twitter: [@MagzCelyn](https://twitter.com/magero_jocyline)
+- Linkedin: [linkedin](https://www.linkedin.com/in/jocyline-magero/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Jmagero/bookstore/issues).
+Feel free to check the [issues page](https://github.com/Jmagero/metrics-webapp/issues).
 
 ## Show your support
 
