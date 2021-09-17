@@ -1,15 +1,19 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
+import {
+  createStore, combineReducers, applyMiddleware, compose,
+} from 'redux';
 import thunk from 'redux-thunk';
-import covidReducer from './covid/covid';
+import categories from './covid/covid';
 
-const reducer = combineReducers({
-  covidReducer,
+const middlewares = [thunk];
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const rootReducer = combineReducers({
+  categories,
 });
 
 const store = createStore(
-  reducer,
-  applyMiddleware(thunk, logger),
+  rootReducer,
+  composeEnhancers(applyMiddleware(...middlewares)),
 );
 
 export default store;

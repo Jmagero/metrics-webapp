@@ -1,60 +1,52 @@
+/* eslint-disable no-param-reassign */
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const GET_DATA_SUCCESS = 'covid/covidReducer/GET_DATA_SUCCESS';
-const GET_DATA = 'covid/covidReducer/GET_DATA';
-const REQUEST_FAILURE = 'covid/covidReducer/REQUEST_FAILURE';
-const COUNTRY_UPDATES = 'covid/covidReducer/COUNTRY_UPDATES';
-export const today = new Date().toISOString().split('T')[0];
+const baseUrl = 'https://api.covid19tracking.narrativa.com/api/2021-08-09/country/France';
 
-const initialState = {
-  data: {},
-  loading: false,
-  country: 'Afghanistan',
-  error: {},
-};
+export const fetchData = createAsyncThunk(
+  'categories/getCategories',
+  async () => {
+    const { data } = await axios.get(`${baseUrl}`);
+    return data;
+  },
+);
 
-const reducer = (state = initialState, action) => {
-  if (state === undefined || action === undefined) {
-    return initialState;
-  }
-  switch (action.type) {
-    case GET_DATA:
-      return { ...state, loading: true };
-    case GET_DATA_SUCCESS:
-      return { ...state, data: action.payload, loading: false };
-    case REQUEST_FAILURE:
-      return { ...state, error: action.error, loading: false };
-    case COUNTRY_UPDATES:
-      return { ...state, country: action.payload };
-    default:
-      return state;
-  }
-};
-
-export const fetchData = () => ({
-  type: GET_DATA,
+export const fetchCategories = createSlice({
+  name: 'categories',
+  initialState: {
+    list: [],
+    status: 'idle',
+    todayCases: 0,
+  },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchData.fulfilled, (state, action) => {
+        const todayCases = action.payload.dates['2021-08-09'].countries.France.today_confirmed;
+        const myData = [];
+        Object.entries(action.payload.dates['2021-08-09'].countries.France.regions).forEach((el) => {
+          myData.push({
+            id: el[1].id,
+            name: el[1].name,
+            confirmedToday: el[1].today_confirmed,
+            deathsToday: el[1].today_deaths,
+            newDeaths: el[1].today_new_deaths,
+            newCases: el[1].today_new_confirmed,
+            intensiveCare: el[1].today_new_intensive_care,
+            hospitalised: el[1].today_total_hospitalised_patients,
+          });
+        });
+        state.list = myData;
+        state.todayCases = `${todayCases} Active`;
+        state.status = 'fulfilled';
+      })
+      .addCase(fetchData.pending, (state) => {
+        state.status = [];
+        state.status = 'pending';
+        state.todayCases = '';
+      });
+  },
 });
 
-export const getDailyUpdates = (payload) => ({
-  type: GET_DATA_SUCCESS,
-  payload,
-});
-
-export const fetchFailure = (err) => ({
-  type: REQUEST_FAILURE,
-  err,
-});
-
-export const getCountryUpdates = (payload) => ({
-  type: COUNTRY_UPDATES,
-  payload,
-});
-
-export const getData = () => async (dispatch) => {
-  dispatch(fetchData());
-  const response = await axios.get(`https://api.covid19tracking.narrativa.com/api/${today}`);
-  const data = await response.data;
-  return dispatch(getDailyUpdates(data));
-};
-
-export default reducer;
+export default fetchCategories.reducer;
