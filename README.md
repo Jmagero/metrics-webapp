@@ -83,3 +83,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+- React, Redux and React Router documentation
+- Jest Documentation for Testing.
+- Credits to the original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
