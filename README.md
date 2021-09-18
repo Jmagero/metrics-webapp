@@ -20,7 +20,7 @@ This is React project that is about building a mobile web application to check a
 
 ## Video
 
-
+[Video](https://www.loom.com/share/282482322f9d4048915608f01690481a)
 
 ## Getting Started
 
