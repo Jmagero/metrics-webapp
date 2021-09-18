@@ -1,15 +1,25 @@
 import './Category.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Card from './CategoryCard';
 import { fetchData } from '../redux/covid/covid';
+import Filter from './filter';
 
 const Category = () => {
   const dispatch = useDispatch();
   const countryCases = useSelector((state) => state.categories.todayCases);
   const categoriesStatus = useSelector((state) => state.categories.status);
   const categories = useSelector((state) => state.categories.list);
+
+  console.log(categories);
+
+  const [minDeaths, setMinDeaths] = useState(0);
+  const categoriesList = categories.filter((category) => minDeaths < category.deathsToday);
+
+  const handleMinNumberOfDeaths = (e) => {
+    setMinDeaths(e.target.value);
+  };
 
   useEffect(() => {
     if (categoriesStatus === 'idle') {
@@ -27,9 +37,10 @@ const Category = () => {
       </div>
       <div className="byRegion lato">
         <span>STATS BY REGION</span>
+        <Filter value={minDeaths} handler={handleMinNumberOfDeaths} />
       </div>
       <div className="cardsContainer">
-        {categories.map((el) => (
+        {categoriesList.map((el) => (
           <Link key={el.id} to={`/details/${el.id}`} className="row">
             <Card id={el.id} city={el.name} activeCases={el.confirmedToday} />
           </Link>
