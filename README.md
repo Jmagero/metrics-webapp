@@ -16,7 +16,7 @@ This is React project that is about building a mobile web application to check a
 
 ## Live Demo
 
-
+[Netlify deploy](https://confident-aryabhata-71d87b.netlify.app/)
 
 ## Video
 
