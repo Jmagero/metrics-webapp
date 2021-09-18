@@ -3,7 +3,7 @@
 # Metrics-webapp
 This is React project that is about building a mobile web application to check a list of metrics (numeric values).
 
-![image](https://user-images.githubusercontent.com/52098394/133852663-6316d40f-1d1a-434c-a44c-14522da66b90.png)
+![image](https://user-images.githubusercontent.com/52098394/133906445-b5481844-a9af-417c-9606-ec8a5d70da7c.png)
 
 
 ## Built With
