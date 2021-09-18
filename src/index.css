@@ -25,3 +25,9 @@ code {
     'Courier New',
     monospace;
 }
+
+.deaths-filter {
+  background-color: #fa498d;
+  padding: 3px 0;
+  color: #fff;
+}
