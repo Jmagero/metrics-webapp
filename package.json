@@ -1,6 +1,5 @@
 {
   "name": "metrics-webapp",
-  "homepage": "http://gitname.github.io/metrics-webapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
