@@ -11,9 +11,6 @@ const Category = () => {
   const countryCases = useSelector((state) => state.categories.todayCases);
   const categoriesStatus = useSelector((state) => state.categories.status);
   const categories = useSelector((state) => state.categories.list);
-
-  console.log(categories);
-
   const [minDeaths, setMinDeaths] = useState(0);
   const categoriesList = categories.filter((category) => minDeaths < category.deathsToday);
 
