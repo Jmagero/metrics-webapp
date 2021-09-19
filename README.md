@@ -16,7 +16,7 @@ This is React project that is about building a mobile web application to check a
 
 ## Live Demo
 
-[Github](https://jmagero.github.io/)
+[Netlify](https://mystifying-cori-88f976.netlify.app/)
 
 ## Video
 
