@@ -1,11 +1,10 @@
-/* eslint-disable */
 import PropTypes from 'prop-types';
 import { FaArrowCircleRight } from 'react-icons/fa';
 import virus from './virus.png';
 import './CategoryCard.css';
 
 const Card = ({ id, city, activeCases }) => (
-  <div className="cardo cardFlex" id={id}>
+  <div className="cardo cardFlex px-0" id={id}>
     <div className="arrowContainer cardFlex">
       <FaArrowCircleRight className="cardArrow" />
     </div>

@@ -25,7 +25,7 @@ const Category = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-fluid p-0">
       <div className="header flexColumn">
         <div className="infoContainer">
           <h2 className="lato">France</h2>
@@ -38,7 +38,7 @@ const Category = () => {
       </div>
       <div className="cardsContainer">
         {categoriesList.map((el) => (
-          <Link key={el.id} to={`/details/${el.id}`} className="row">
+          <Link key={el.id} to={`/details/${el.id}`} className="row g-0">
             <Card id={el.id} city={el.name} activeCases={el.confirmedToday} />
           </Link>
         ))}
