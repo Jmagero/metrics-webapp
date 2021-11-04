@@ -1,7 +1,7 @@
 import Category from '../components/Category';
 
 const Home = () => (
-  <div className="home">
+  <div>
     <Category />
   </div>
 );
