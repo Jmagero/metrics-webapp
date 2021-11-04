@@ -16,7 +16,7 @@ This is React project that is about building a mobile web application to check a
 
 ## Live Demo
 
-[Netlify](https://quirky-leakey-7e7b8e.netlify.app/)
+[Live](https://quirky-leakey-7e7b8e.netlify.app/)
 
 ## Video
 
