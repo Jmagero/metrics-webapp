@@ -34,7 +34,7 @@ const App = () => {
   ));
 
   return (
-    <div className="App">
+    <>
       <Router>
         <NavBar />
         <Switch>
@@ -44,7 +44,7 @@ const App = () => {
           {myRoutes()}
         </Switch>
       </Router>
-    </div>
+    </>
   );
 };
 export default App;
